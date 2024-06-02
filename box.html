@@ -1,371 +1,698 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Boxes</title>
-    <link rel="stylesheet" href="box.css" />
-    <!-- Latest compiled and minified CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1ec8c0ecbd.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <nav class="navbar">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-arrows-fullscreen"
-        style="color: white; margin-left: 1rem; margin-bottom: 2rem"
-        viewBox="0 0 16 16"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"
-        />
-      </svg>
-      <div class="navtabs">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-bell"
-          style="color: white; margin-top: 0.5rem"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
-          />
-        </svg>
-        <img
-          src="man1.jpg"
-          alt="man"
-          style="
-            border-radius: 50%;
-            margin-bottom: 2rem;
+    <title>Exercise2</title>
+    <style>
+      * {
+        color: #455a64;
+      }
+      header {
+        width: 100%;
+        height: 5vh;
+        background-color: #448aff;
+        display: flex;
+        padding-left: 2vh;
+      }
+      .parent {
+        width: 95%;
+        margin: auto;
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+      }
+      .a {
+        width: 100%;
+        height: 22%;
+        display: flex;
+        gap: 2.5vh;
+        margin-top: 2vh;
+      }
+      .a1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 33.3%;
+        height: 100%;
+      }
+      .a1 div {
+        width: 100%;
+        background-color: white;
+        height: 50%;
+        padding-top: 2%;
+        text-align: center;
+      }
+      .a2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 32%;
+        height: 100%;
+      }
+      .a2 div {
+        width: 100%;
+        background-color: white;
+        height: 50%;
+        text-align: center;
+        padding-top: 2%;
+      }
+      .a3 {
+        width: 32%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
 
-            margin-left: 1.5rem;
-            width: 2rem;
-            height: 2rem;
-          "
-        />
-        <div class="dropdown">
-          <button
-            class="btn dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            style="
-              background-color: rgb(79, 152, 255);
-              color: white;
-              width: 7rem;
-              margin-bottom: 2rem;
-              height: 2rem;
-            "
-          >
-            John Doe
-          </button>
-        </div>
-      </div>
-    </nav>
+        color: white;
+      }
+      .a3 > div > div {
+        text-align: center;
+        padding-top: 2%;
+      }
+      .grey {
+        color: grey;
+        font-size: 14px;
+      }
+      .b {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        gap: 2.5vh;
+      }
+      .b1 {
+        width: 55%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+      }
+      .b1 > div {
+        width: 100%;
+        height: 20%;
+        gap: 2px;
+        margin-left: 2vh;
+        border-bottom: solid 2px #edf3f5;
+      }
+      .b1 img {
+        margin-top: 1vh;
+      }
+      .b2 {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+      }
+      .c {
+        width: 100%;
+        height: 18%;
+        display: flex;
+        gap: 2vh;
+        background-color: white;
+        padding-left: 2.5vh;
+        padding-top: 1vh;
+      }
+      .c1,
+      .c2,
+      .c3,
+      .c4 {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .range-slider1,
+      .range-slider2,
+      .range-slider3,
+      .range-slider4 {
+        width: 95%;
+        background-color: #edf3f5;
+        height: 1vh;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .range-slider1::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border: solid 2px #ff5252;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px #ff5652;
+      }
+      .range-slider2::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border: solid 2px #448aff;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px #448aff;
+      }
+      .range-slider3::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border: solid 2px #11c15b;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px #11c15b;
+      }
+      .range-slider4::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border: solid 2px #ffe100;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px #ffe100;
+      }
+    </style>
   </head>
-  <body style="background-color: rgb(236, 235, 235)">
-    <div class="container">
-      <div class="grid1">
-        <span class="gg1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            style="color: rgb(79, 152, 255); width: 2rem; height: 2rem"
-            class="bi bi-person"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
-            />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >10k
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Visitors
-            </p></span
-          >
-        </span>
-        <div class="gg2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            style="color: rgb(79, 255, 176); width: 2rem; height: 2rem"
-            class="bi bi-volume-down"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11M12.025 8a4.5 4.5 0 0 1-1.318 3.182L10 10.475A3.5 3.5 0 0 0 11.025 8 3.5 3.5 0 0 0 10 5.525l.707-.707A4.5 4.5 0 0 1 12.025 8"
-            />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >100%
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Volume
-            </p></span
-          >
+  <body>
+    <div style="background-color: #edf3f5">
+      <header>
+        <div style="width: 80%; padding-top: 1vh">
+          <a href=""
+            ><i class="fa-solid fa-maximize" style="color: #ffffff"></i
+          ></a>
         </div>
-        <div class="gg3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-file-earmark"
-            style="color: red; width: 2rem; height: 2rem"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"
+        <div style="width: 20%; display: flex; justify-content: space-evenly">
+          <div style="padding-top: 1vh">
+            <i class="fa-regular fa-bell" style="color: #ffffff"></i>
+          </div>
+          <div>
+            <img
+              src="man1.jpg"
+              alt=""
+              height="30vh"
+              width="30wh"
+              style="border-radius: 50%; margin-top: 0.5vh"
             />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >2000+
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Files
-            </p></span
-          >
+          </div>
+          <div style="color: white; padding-top: 1vh">
+            John Doe
+            <i class="fa-solid fa-angle-down" style="color: #ffffff"></i>
+          </div>
         </div>
-        <div class="gg4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-envelope"
-            viewBox="0 0 16 16"
-            style="color: rgb(79, 152, 255); width: 2rem; height: 2rem"
-          >
-            <path
-              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
-            />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >120
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Mails
-            </p></span
-          >
+      </header>
+      <div class="parent">
+        <div class="a">
+          <div class="a1">
+            <div style="display: flex; gap: 2px">
+              <div style="display: flex">
+                <div>
+                  <i class="fa-regular fa-user" style="color: #5f6ffe"></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>10K</b></p>
+                  <p style="height: 50%" class="grey">Visitors</p>
+                </div>
+              </div>
+              <div style="display: flex">
+                <div>
+                  <i class="fa-solid fa-volume-low" style="color: #11c15b"></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>100%</b></p>
+                  <p class="grey" style="height: 50%">Volume</p>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 2px">
+              <div style="display: flex">
+                <div>
+                  <i
+                    class="fa-regular fa-file-lines"
+                    style="color: #ff5252"
+                  ></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>2000+</b></p>
+                  <p style="height: 50%" class="grey">Files</p>
+                </div>
+              </div>
+              <div style="display: flex">
+                <div>
+                  <i
+                    class="fa-regular fa-envelope-open"
+                    style="color: #5a8cff"
+                  ></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>120</b></p>
+                  <p style="height: 50%" class="grey">Mails</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="a2">
+            <div style="display: flex; height: 50%">
+              <div style="display: flex">
+                <div>
+                  <i
+                    class="fa-sharp fa-solid fa-share-nodes"
+                    style="color: #536dfe"
+                  ></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>1000</b></p>
+                  <p style="height: 50%" class="grey">Share</p>
+                </div>
+              </div>
+              <div style="display: flex">
+                <div>
+                  <i
+                    class="fa-solid fa-network-wired"
+                    style="color: #11c15b"
+                  ></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>600</b></p>
+                  <p style="height: 50%" class="grey">Network</p>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; height: 50%">
+              <div style="display: flex">
+                <div>
+                  <i class="fa-solid fa-signal" style="color: #ff5652"></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>350</b></p>
+                  <p style="height: 50%" class="grey">Returnes</p>
+                </div>
+              </div>
+              <div style="display: flex; height: 50%">
+                <div>
+                  <i class="fa-solid fa-wifi" style="color: #448aff"></i>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <p style="height: 50%"><b>100%</b></p>
+                  <p style="height: 50%" class="grey">Connection</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="a3">
+            <div style="display: flex; height: 46%">
+              <div
+                style="
+                  width: 25%;
+                  background-color: #11c15b;
+                  color: white;
+                  height: 100%;
+                  padding-top: 2.5vh;
+                "
+              >
+                <i class="fa-solid fa-star" style="color: #ffffff"></i>
+              </div>
+              <div style="width: 75%; background-color: #32ed80; height: 100%">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    height: 40%;
+                    text-align: left;
+                    padding-left: 2vh;
+                  "
+                >
+                  <p style="height: 50%; color: white">
+                    <b style="color: white">4000+</b>
+                  </p>
+                  <p style="height: 50%; color: white">Ratings Received</p>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; height: 46%">
+              <div
+                style="
+                  width: 25%;
+                  background-color: #448aff;
+                  color: white;
+                  padding-top: 2.5vh;
+                "
+              >
+                <i class="fa-solid fa-trophy" style="color: #ffffff"></i>
+              </div>
+              <div
+                style="width: 75%; background-color: #91baff; text-align: left"
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    height: 40%;
+                    text-align: left;
+                    padding-left: 2vh;
+                  "
+                >
+                  <p style="height: 50%; color: white">
+                    <b style="color: white">17</b>
+                  </p>
+                  <p style="height: 50%; color: white">Achievements</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <!--end of grid1-->
-      <div class="grid2">
-        <!--start of grid 2-->
-        <span class="sg1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-share-fill"
-            style="color: rgb(79, 152, 255); width: 2rem; height: 2rem"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"
-            />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >1000
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Share
-            </p></span
-          >
-        </span>
-        <div class="sg2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            style="color: rgb(79, 255, 176); width: 2rem; height: 2rem"
-            class="bi bi-pci-card-network"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M6.5 9.5v-2h.214a.5.5 0 0 0 .5-.5v-.5h2.572V7a.5.5 0 0 0 .5.5h.214v2z"
-            />
-            <path
-              d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .5.5V4h13.5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5H2v2.5a.5.5 0 0 1-1 0V2H.5a.5.5 0 0 1-.5-.5m6.714 4a.5.5 0 0 0-.5.5v.5H6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5V7a.5.5 0 0 0-.5-.5h-.214V6a.5.5 0 0 0-.5-.5z"
-            />
-            <path
-              d="M3 12.5h3.5v1a.5.5 0 0 1-.5.5H3.5a.5.5 0 0 1-.5-.5zm8 0H7v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"
-            />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >600
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Network
-            </p></span
-          >
+        <div class="b">
+          <div class="b1">
+            <div style="display: flex; padding-top: 2%; margin-left: 0%">
+              <div
+                style="
+                  width: 95%;
+                  height: 50%;
+                  border-left: solid 3px #536dfe;
+                  padding-left: 2vh;
+                "
+              >
+                <b>Member's performance</b>
+              </div>
+              <div style="width: 5%; margin-right: 1%">
+                <i class="fa-solid fa-wrench" style="color: #98999a"></i>
+              </div>
+            </div>
+            <div style="display: flex">
+              <div>
+                <img
+                  src="https://th.bing.com/th/id/OIP.HIXHMpfYN41O8AMuOxqT4gHaKX?pid=ImgDet&w=179&h=251&c=7&dpr=1.3"
+                  alt=""
+                  height="40vh"
+                  width="40wh"
+                  style="border-radius: 50%"
+                />
+              </div>
+              <div
+                style="
+                  width: 80%;
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 2vh;
+                  margin-top: 1vh;
+                "
+              >
+                <div>Shirley Hoe</div>
+                <div class="grey">Sales executive , NY</div>
+              </div>
+              <div style="margin-top: 2.5vh">
+                <b>$78.001</b>
+                <i class="fa-solid fa-turn-down" style="color: #ff5252"></i>
+              </div>
+            </div>
+            <div style="display: flex">
+              <div>
+                <img
+                  src="https://th.bing.com/th/id/OIP.xXRtnBLAJfh-Q8KtaMtcDAHaHa?pid=ImgDet&w=179&h=179&c=7&dpr=1.3"
+                  alt=""
+                  height="40vh"
+                  width="40wh"
+                  style="border-radius: 50%"
+                />
+              </div>
+              <div
+                style="
+                  width: 80%;
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 2vh;
+                  margin-top: 1vh;
+                "
+              >
+                <div>James Alexander</div>
+                <div class="grey">Sales executive , EL</div>
+              </div>
+              <div style="margin-top: 2.5vh">
+                <b>$89.051 </b
+                ><i class="fa-solid fa-turn-up" style="color: #37c23b"></i>
+              </div>
+            </div>
+            <div style="display: flex">
+              <div>
+                <img
+                  src="https://th.bing.com/th/id/OIP.HIXHMpfYN41O8AMuOxqT4gHaKX?pid=ImgDet&w=179&h=251&c=7&dpr=1.3"
+                  alt=""
+                  height="40vh"
+                  width="40wh"
+                  style="border-radius: 50%"
+                />
+              </div>
+              <div
+                style="
+                  width: 80%;
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 2vh;
+                  margin-top: 1vh;
+                "
+              >
+                <div>Shirley Hoe</div>
+                <div class="grey">Sales executive , NY</div>
+              </div>
+              <div style="margin-top: 2.5vh">
+                <b>$89.051 </b
+                ><i class="fa-solid fa-turn-up" style="color: #37c23b"></i>
+              </div>
+            </div>
+            <div style="display: flex">
+              <div>
+                <img
+                  src="https://th.bing.com/th/id/OIP.xXRtnBLAJfh-Q8KtaMtcDAHaHa?pid=ImgDet&w=179&h=179&c=7&dpr=1.3"
+                  alt=""
+                  height="40vh"
+                  width="40wh"
+                  style="border-radius: 50%"
+                />
+              </div>
+              <div
+                style="
+                  width: 80%;
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 2vh;
+                  margin-top: 1vh;
+                "
+              >
+                <div>James Alexander</div>
+                <div class="grey">Sales executive , EL</div>
+              </div>
+              <div style="margin-top: 2.5vh; text-align: right">
+                <b>$89.051 </b
+                ><i class="fa-solid fa-turn-up" style="color: #37c23b"></i>
+              </div>
+            </div>
+          </div>
+          <div class="b2">
+            <div style="width: 100%; height: 40%; display: flex; gap: 3vh">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  width: 50%;
+                  text-align: center;
+                  background-color: white;
+                  padding-top: 2vh;
+                "
+              >
+                <div>Total Subscription</div>
+                <div>
+                  <i class="fa-solid fa-arrow-down" style="color: #ff5252"></i>
+                  <b> 7652</b>
+                </div>
+                <div>48% From Last 24 Hours</div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  width: 50%;
+                  text-align: center;
+                  background-color: white;
+                  padding-top: 2vh;
+                "
+              >
+                <div>Order status</div>
+                <div>
+                  <i class="fa-solid fa-arrow-up" style="color: #11c15b"></i>
+                  <b>6325</b>
+                </div>
+                <div>36% From Last 6 Monthes</div>
+              </div>
+            </div>
+            <div style="width: 100%; height: 20%; display: flex; gap: 3vh">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #ff5252;
+                  padding-left: 1.5vh;
+                "
+              >
+                <div
+                  style="
+                    height: 20%;
+                    width: 100%;
+                    text-align: right;
+                    color: white;
+                  "
+                >
+                  15%
+                </div>
+                <div style="height: 40%; width: 100%; color: white">489</div>
+                <div style="height: 40%; width: 100%; color: white">
+                  Total Comment
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #11c15b;
+                  padding-left: 1.5vh;
+                "
+              >
+                <div
+                  style="
+                    height: 20%;
+                    width: 100%;
+                    text-align: right;
+                    color: white;
+                  "
+                >
+                  20%
+                </div>
+                <div style="height: 40%; width: 100%; color: white">$5782</div>
+                <div style="height: 40%; width: 100%; color: white">
+                  Income Status
+                </div>
+              </div>
+            </div>
+            <div style="width: 100%; height: 40%; display: flex; gap: 3vh">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  width: 50%;
+                  text-align: center;
+                  background-color: white;
+                  padding-top: 2vh;
+                "
+              >
+                <div>Unique Visitors</div>
+                <div>
+                  <i class="fa-solid fa-arrow-down" style="color: #ff5252"></i>
+                  <b>652</b>
+                </div>
+                <div>48% From Last 24 Hours</div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  width: 50%;
+                  text-align: center;
+                  background-color: white;
+                  padding-top: 2vh;
+                "
+              >
+                <div>Monthly Earnings</div>
+                <div>
+                  <i class="fa-solid fa-arrow-up" style="color: #11c15b"></i>
+                  <b>5963</b>
+                </div>
+                <div>36% From Last 6 Months</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="sg3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            style="color: red; width: 2rem; height: 2rem"
-            fill="currentColor"
-            class="bi bi-reception-4"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"
-            />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >350
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Returns
-            </p></span
-          >
+        <div class="c">
+          <div class="c1">
+            <div style="height: 25%; width: 100%">Published Project</div>
+            <div style="height: 25%; width: 100%">
+              <b>532 <span style="color: #37c23b">+1.69%</span></b>
+            </div>
+            <div style="height: 50%; width: 100%; padding-top: 5%">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="25"
+                class="range-slider1"
+                id="myRange"
+              />
+            </div>
+          </div>
+          <div class="c2">
+            <div style="height: 25%; width: 100%">Completed Task</div>
+            <div style="height: 25%; width: 100%">
+              <b>4,569 <span style="color: #ff5652">-0.5%</span></b>
+            </div>
+            <div style="height: 50%; width: 100%; padding-top: 5%">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="60"
+                class="range-slider2"
+                id="myRange"
+              />
+            </div>
+          </div>
+          <div class="c3">
+            <div style="height: 25%; width: 100%">Successfull Task</div>
+            <div style="height: 25%; width: 100%">
+              <b>532 <span style="color: #37c23b">+1.69%</span></b>
+            </div>
+            <div style="height: 50%; width: 100%; padding-top: 5%">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="80"
+                class="range-slider3"
+                id="myRange"
+              />
+            </div>
+          </div>
+          <div class="c4">
+            <div style="height: 25%; width: 100%">Ongoing Project</div>
+            <div style="height: 25%; width: 100%">
+              <b>365 <span style="color: #37c23b">+0.35%</span></b>
+            </div>
+            <div style="height: 50%; width: 100%; padding-top: 5%">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="40"
+                class="range-slider4"
+                id="myRange"
+              />
+            </div>
+          </div>
         </div>
-        <div class="sg4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            style="color: rgb(79, 152, 255); width: 2rem; height: 2rem"
-            class="bi bi-wifi"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.44 12.44 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.52.52 0 0 0 .668.05A11.45 11.45 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049"
-            />
-            <path
-              d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.46 9.46 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065m-2.183 2.183c.226-.226.185-.605-.1-.75A6.5 6.5 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.5 5.5 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091zM9.06 12.44c.196-.196.198-.52-.04-.66A2 2 0 0 0 8 11.5a2 2 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"
-            />
-          </svg>
-          <span
-            style="
-              font-weight: bold;
-              display: flex;
-              flex-direction: column;
-              margin-left: 4rem;
-            "
-            >120
-            <p style="font-size: small; color: rgb(210, 210, 210)">
-              Mails
-            </p></span
-          >
-        </div>
-      </div>
-      <!--End of grid 2-->
-      <div class="grid3">
-        <div class="dg1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            fill="currentColor"
-            style="
-              color: white;
-              width: 0.5rem;
-              height: 0.5rem;
-              margin-left: 1.5rem;
-              width: 30%;
-              background-color: rgb(47, 130, 47);
-              height: 4.5rem;
-            "
-            class="bi bi-star"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
-            />
-          </svg>
-          <span class="green">
-            <span style="font-weight: bold">4000+</span>
-            <span>Rating Received</span>
-          </span>
-        </div>
-        <div class="dg2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-trophy"
-            viewBox="0 0 16 16"
-            style="
-              color: white;
-              width: 0.5rem;
-              height: 0.5rem;
-              margin-left: 1.5rem;
-              width: 30%;
-              background-color: rgb(79, 152, 255);
-              height: 4.5rem;
-            "
-          >
-            <path
-              d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z"
-            />
-          </svg>
-          <span class="blue">
-            <span style="font-weight: bold">17</span>
-            <span>Achievement</span>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="container2">
-      <div class="c1">
-        <span> Member's performance </span>
       </div>
     </div>
   </body>
 </html>
+Exercise2.html 21 KB
